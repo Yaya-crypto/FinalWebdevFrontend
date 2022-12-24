@@ -21,11 +21,11 @@ const App = () => {
         <Route exact path="/employees" component={AllEmployeesContainer} />
         <Route exact path="/employee/:id" component={EmployeeContainer} />
         <Route exact path="/newemployee" component={NewEmployeeContainer} />
-        <Route exact path="/editemployee" component={EditEmployeeContainer} />
+        <Route exact path="/editemployee/:id" component={EditEmployeeContainer} />
         <Route exact path="/tasks" component={AllTasksContainer} />
         <Route exact path="/newtask" component={NewTaskContainer} />
-        <Route exact path="/tasks/:id" component={TaskContainer} />
-        <Route exact path="/edittasks/:id" component={EditTaskContainer} />
+        <Route exact path="/task/:id" component={TaskContainer} />
+        <Route exact path="/edittask/:id" component={EditTaskContainer} />
       </Switch>
     </div>
   )

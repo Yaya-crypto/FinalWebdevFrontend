@@ -9,7 +9,7 @@ class EditEmployeeContainer extends Component {
     constructor(props){
         super(props);
         this.state = {
-            id: null,
+            id: 0,
             firstname: "",
             lastname: "",
             department: "",
@@ -62,7 +62,7 @@ class EditEmployeeContainer extends Component {
     render() {
       //go to single Employee view of the edited Employee
         if(this.state.redirect) {
-          return (<Redirect to={`/employees/${this.state.redirectId}`}/>)
+          return (<Redirect to={`/employee/${this.state.redirectId}`}/>)
         }
 
         return (

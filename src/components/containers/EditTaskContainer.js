@@ -62,7 +62,7 @@ class EditTaskContainer extends Component {
     render() {
       //go to single task view of the edited task
         if(this.state.redirect) {
-          return (<Redirect to={`/tasks/${this.state.redirectId}`}/>)
+          return (<Redirect to={`/task/${this.state.redirectId}`}/>)
         }
 
         return (
