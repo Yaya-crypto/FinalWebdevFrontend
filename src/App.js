@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import { Switch, Route } from "react-router-dom";
+
+import {
+  HomePageContainer,
+  AllEmployeesContainer,
+  EmployeeContainer,
+  NewEmployeeContainer,
+  EditEmployeeContainer,
+  AllTasksContainer,
+  TaskContainer,
+  NewTaskContainer,
+  EditTaskContainer
+} from './components/containers';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Switch>
+        <Route exact path="/" component={HomePageContainer} />
+        <Route exact path="/employees" component={AllEmployeesContainer} />
+        <Route exact path="/employee/:id" component={EmployeeContainer} />
+        <Route exact path="/newemployee" component={NewEmployeeContainer} />
+        <Route exact path="/editemployee" component={EditEmployeeContainer} />
+        <Route exact path="/tasks" component={AllTasksContainer} />
+        <Route exact path="/newtask" component={NewTaskContainer} />
+        <Route exact path="/tasks/:id" component={TaskContainer} />
+        <Route exact path="/edittasks/:id" component={EditTaskContainer} />
+      </Switch>
     </div>
-  );
+  )
 }
 
 export default App;
