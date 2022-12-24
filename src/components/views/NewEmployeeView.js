@@ -7,15 +7,15 @@ const NewEmployeeView = (props) => {
           <form onSubmit={(e) => handleSubmit(e)}>
 
             <h3>First Name:</h3>
-            <input name="EmployeeID" onChange ={(e) => handleChange(e)} />
+            <input name="firstname" onChange ={(e) => handleChange(e)} />
 
             <h3> Last Name:</h3>
-            <input name="Description" onChange ={(e) => handleChange(e)} />
+            <input name="lastname" onChange ={(e) => handleChange(e)} />
 
             <h3>Department:</h3>
-            <input name="Priority" onChange ={(e) => handleChange(e)} />
+            <input name="department" onChange ={(e) => handleChange(e)} />
 
-            <button> Submit</button> 
+            <button>Submit</button> 
             </form>
         </div>
       );

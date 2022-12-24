@@ -10,10 +10,10 @@ class NewTaskContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            // employeeId: null,
             description: "",
-            priority: null,
-            completion: null,
-            employeeID: null,
+            priorityLevel: 0,
+            completionStatus: "",
             redirect: false,
             redirectId: null,
             error: ""
@@ -29,23 +29,23 @@ class NewTaskContainer extends Component {
     handleSubmit = async event => {
         event.preventDefault();
 
-        if (this.state.title === "") {
-            this.setState({error: "Title field is required"});
+        if (this.state.description === "") {
+            this.setState({error: "Description field is required"});
             return;
         }
 
         let task = {
+            // employeeId: this.state.employeeId,
             description: this.state.description,
-            priority: this.state.priority,
-            completion: this.state.completion,
-            employeeID: this.state.employeeID
+            priorityLevel: this.state.priority,
+            completionStatus: this.state.completion,
         };
 
         let newTask = await this.props.addTask(task);
 
         this.setState({
             redirect: true,
-            redirectId: task.id,
+            redirectId: newTask.id,
             error: ""
         });
     }

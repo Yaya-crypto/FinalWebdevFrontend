@@ -8,18 +8,18 @@ const NewTaskView = (props) => {
           <form onSubmit={(e) => handleSubmit(e)}>
 
             <h3>EmployeeID</h3>
-            <input name="EmployeeID" onChange ={(e) => handleChange(e)} />
+            <input type="text" name="employeeId" onChange ={(e) => handleChange(e)} />
 
             <h3>Description</h3>
-            <input name="Description" onChange ={(e) => handleChange(e)} />
+            <input type="text" name="description" onChange ={(e) => handleChange(e)} />
 
             <h3>Priority</h3>
-            <input name="Priority" onChange ={(e) => handleChange(e)} />
+            <input type="text" name="priority" onChange ={(e) => handleChange(e)} />
 
             <h3>Completion</h3>
-            <input name="Completion" onChange ={(e) => handleChange(e)} />
+            <input type="text" name="completion" onChange ={(e) => handleChange(e)} />
 
-            <button> Submit</button> 
+            <button type="submit"> Submit</button> 
             </form>
         </div>
       );

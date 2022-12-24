@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+// Fix the all tasks link. its not working, keep sthrowing axios error
 const AllTasksView = (props) => {
   let { allTasks, deleteTask } = props;
   //Tasks = [{id: 300, title: "hello"}]
