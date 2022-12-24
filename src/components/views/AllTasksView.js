@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
 const AllTasksView = (props) => {
-  let { tasks, deleteTask } = props;
+  let { allTasks, deleteTask } = props;
   //Tasks = [{id: 300, title: "hello"}]
-  if (!tasks.length) {
+  if (!allTasks.length) {
     return (
     <div>
       <p>There are no tasks.</p>
@@ -16,8 +16,8 @@ const AllTasksView = (props) => {
   
   return (
     <div>
-      {tasks.map((task) => {
-        let title = task.title;
+      {allTasks.map((task) => {
+        let title = task.description;
         return (
           <div key={task.id}>
           <Link to={`/task/${task.id}`}>
