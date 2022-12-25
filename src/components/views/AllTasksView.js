@@ -16,12 +16,13 @@ const AllTasksView = (props) => {
   
   return (
     <div>
+    <h1  className='title'> Tasks</h1>
       {allTasks.map((task) => {
         let title = task.description;
         return (
-          <div key={task.id}>
-          <Link to={`/task/${task.id}`}>
-            <h1>{title}</h1>
+          <div className="container" key={task.id}>
+          <Link className="subtitle" to={`/task/${task.id}`}>
+            <h1  className='title'>{title}</h1>
           </Link>
           <button onClick={() => deleteTask(task.id)}>Delete</button>
           </div>

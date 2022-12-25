@@ -9,29 +9,29 @@ const EmployeeView  = (props) => {
     let availableTasks = allTasks.filter(task => task.employeeId!==employee.id);
     
     return (
-      <div>      
-        <h3>{employee.firstName}</h3>
-        <h3>{employee.lastName}</h3>
-        <h3>{employee.id}</h3>
-        <Link to={`/editemployee/${employee.id}`}>Edit employee information</Link>
-         
+      <div>  
+        <div style={{display: "flex", flexDirection: "column", alignItems: "center", padding: "4rem"}}>
+          <h3 className='title'>{employee.firstname} {employee.lastname} ({employee.id})</h3>
+          <Link className="subtitle" style={{color: "white"}} to={`/editemployee/${employee.id}`}>Edit employee information</Link>
+        </div>    
+
         <div style={{display: "flex", flexDirection: "row", justifyContent: "space-evenly"}}>
-          <div>Assigned tasks:
+          <div className="container caption" style={{padding: "2rem"}}>Assigned tasks:
           {assignedTasks.map( task  => {
             return (
-              <div key={task.id}>
-              <Link to={`/task/${task.id}`}>
+              <div className="container" style={{boxShadow: "0px 0px"}} key={task.id}>
+              <Link className="subtitle" to={`/task/${task.id}`}>
                  <h4>{task.description}</h4>
               </Link>
               <button onClick={() => editTask({id:task.id, employeeId: null})}>x</button>
               </div>
             );
           })}</div>
-          <div>Available tasks :
+          <div className="container caption" style={{padding: "2rem"}}>Available tasks :
           {availableTasks.map( task  => {
             return (
-              <div key={task.id}>
-              <Link to={`/task/${task.id}`}>
+              <div className="container" style={{boxShadow: "0px 0px"}} key={task.id}>
+              <Link className="subtitle" to={`/task/${task.id}`}>
                 <h4>{task.description}</h4>
               </Link>
               <button onClick={() => editTask({id:task.id, employeeId: employee.id})}>+</button>

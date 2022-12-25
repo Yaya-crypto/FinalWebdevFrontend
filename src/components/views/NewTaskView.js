@@ -4,7 +4,7 @@ const NewTaskView = (props) => {
 
     return (
         <div>
-          <h1>New Task</h1>
+          <h1 className='title'>New Task</h1>
           <form onSubmit={(e) => handleSubmit(e)}>
 
             <h3>EmployeeID</h3>
