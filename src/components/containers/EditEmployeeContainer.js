@@ -65,7 +65,10 @@ class EditEmployeeContainer extends Component {
 
     return (
       <div className="flexbox">
-        <h1 className="title"> Edit {this.state.firstname} {this.state.lastname} ({this.state.id}) </h1>
+        <h1 className="title">
+          {" "}
+          Edit {this.state.firstname} {this.state.lastname} ({this.state.id}){" "}
+        </h1>
 
         <form
           style={{ textAlign: "center" }}
@@ -83,7 +86,7 @@ class EditEmployeeContainer extends Component {
                 onChange={(e) => this.handleChange(e)}
               />
             </div>
-            
+
             <div className="container">
               <label style={{ color: "#11153e", fontWeight: "bold" }}>
                 Last Name:{" "}
@@ -108,7 +111,9 @@ class EditEmployeeContainer extends Component {
               />
             </div>
 
-            <button className="btn" style={{margin: "3rem"}} type="submit">Submit</button>
+            <button className="btn" style={{ margin: "3rem" }} type="submit">
+              Submit
+            </button>
           </div>
         </form>
       </div>

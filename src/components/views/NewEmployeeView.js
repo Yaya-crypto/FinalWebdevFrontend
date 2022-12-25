@@ -20,7 +20,7 @@ const NewEmployeeView = (props) => {
           <input name="department" onChange={(e) => handleChange(e)} />
         </div>
 
-        <div style={{padding: "3rem"}}>
+        <div style={{ padding: "3rem" }}>
           <button className="btn">Submit</button>
         </div>
       </form>
