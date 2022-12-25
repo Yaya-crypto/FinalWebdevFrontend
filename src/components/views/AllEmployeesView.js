@@ -4,25 +4,27 @@ import { Link } from "react-router-dom";
 const AllEmployeesView = (props) => {
 
   if (!props.allEmployees.length) {
-    return <div>There are no employees.</div>;
+    return <div  className='title'>There are no employees.</div>;
   }
 
   return (
-    <div>
+    <div className="flexbox">
+    <h1 className='title'> Employees</h1>
       {props.allEmployees.map((employee) => {
         let name = employee.firstname + " " + employee.lastname;
         return (
-          <div key={employee.id}>
-          <Link to={`/employee/${employee.id}`}>
-            <h1>{name}</h1>
+          <div className=" container" key={employee.id}>
+
+          <Link className="subtitle" to={`/employee/${employee.id}`}>
+            <h1  >{name}</h1>
           </Link>
-          <p>{employee.department}</p>
+          <p className="caption">{employee.department}</p>
         </div>
         );
       }
       )}
-      <Link to={`/newemployee`}>
-        <button>Add New Employee</button>
+      <Link  to={`/newemployee`}>
+        <button className="btn" >Add New Employee</button>
       </Link>
     </div>
   );
